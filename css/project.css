@@ -1,0 +1,217 @@
+/* styles.css */
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  
+  header {
+    position: fixed;
+    width: 100%;
+    background: #862B0D;
+    color: #862B0D;
+  }
+  
+  
+  #navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #333;
+  }
+  
+  #navbar li {
+    margin: 0 1rem;
+  }
+  
+  #navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  
+  section {
+    padding: 100px 20px 50px;
+    margin-top: 50px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  section.active {
+    background-color: #fff9c9;
+    border-left: 5px solid #faf1ac;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form input,
+  form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #FFC95F;
+    border-radius: 3px;
+  }
+  
+  form button {
+    padding: 10px;
+    font-size: 1rem;
+    background: #FFC95F;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  form button:hover {
+    background: #fff9c9;
+  }
+  
+  #comments-display {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .comment {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+  }
+  
+  #error {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  #scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #862B0D;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    #navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    form {
+      width: 90%;
+    }
+  }
+  .simple-flex-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+    flex-wrap: wrap; /* allows wrapping for responsiveness */
+    background-color: #fdfdfd;
+  }
+  
+  .flex-text {
+    flex: 1 1 50%;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .flex-image {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+  }
+  
+  .flex-image img {
+    max-width: 20%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Responsive stack on small screens */
+  @media (max-width: 768px) {
+    .simple-flex-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .flex-text,
+    .flex-image {
+      flex: 1 1 100%;
+    }
+  
+    .flex-image {
+      margin-top: 20px;
+    }
+  }
+.image {
+    width: 19.50%;
+    gap: 20px;
+    height: auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+/* Star layers background */
+.stars, .stars2, .stars3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Behind all content */
+  background-image: url('https://tse1.mm.bing.net/th?id=OIP.pKu95xH5dldWIic02DhuVwHaFj&pid=Api&P=0&h=220');
+  animation: moveStars 100s linear infinite;
+}
+
+.stars2 {
+  background-image: url('https://tse4.mm.bing.net/th?id=OIP.zox58tEOSZJ-W4Klnq7wfwHaGM&pid=Api&P=0&h=220');
+  animation: moveStars 200s linear infinite;
+  opacity: 0.5;
+}
+
+.stars3 {
+  background-image: url('https://tse4.mm.bing.net/th?id=OIP.zGHAbM0eYFgNh6FF2eo1hQHaEC&pid=Api&P=0&h=220');
+  animation: moveStars 300s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveStars {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 5000px;}
+}
